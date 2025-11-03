@@ -48,7 +48,7 @@ const consultarClima = () => {
       <label for="pais">Pais</label>
       <select id="pais" v-model="busqueda.pais">
         <option value="">--Seleccione un pais--</option>
-        <option v-for="pais in paises" :value="pais.codigo">
+        <option v-for="pais in paises" :key="pais.codigo" :value="pais.codigo">
           {{ pais.nombre }}
         </option>
       </select>

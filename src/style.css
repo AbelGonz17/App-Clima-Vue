@@ -44,7 +44,15 @@ body {
   font-size: 2rem;
   font-weight: 700;
 }
-.formulario input[type="text"], 
+.formulario input[type="text"] {
+  padding: 1rem;
+  background-color: transparent;
+  border: .3rem solid var(--blanco);
+  border-radius: 1rem;
+  color: var(--blanco);
+  font-weight: 400;
+  font-size: 1.8rem;
+}
 .formulario select {
   padding: 1rem;
   background-color: transparent;
@@ -53,6 +61,21 @@ body {
   color: var(--blanco);
   font-weight: 400;
   font-size: 1.8rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.formulario select option {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: var(--blanco);
+  padding: 1rem;
+}
+.formulario select option:hover {
+  background-color: var(--primary);
+}
+.formulario select option:checked {
+  background-color: var(--primary);
+  font-weight: 700;
 }
 .formulario input[type="submit"] {
   background-color: var(--primary);
@@ -64,8 +87,12 @@ body {
   cursor: pointer;
   padding: 1rem;
   margin-top: 2rem;
+  transition: background-color 0.3s;
 }
-.campo ::placeholder { 
+.formulario input[type="submit"]:hover {
+  background-color: #d97706;
+}
+.formulario input::placeholder { 
   color: var(--blanco);
   opacity: 1; 
 }
